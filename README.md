@@ -18,8 +18,6 @@ Provide a copy-and-pasteable, HIPAA-aware pattern for secure, real-time AI on Go
 - **Ops:** Cloud Logging, basic alerting
 ## Architecture (rough)
 
-## Architecture (rough)
-
 ```mermaid
 flowchart LR
   A[Synthetic Vitals Generator] -->|JSON| B[Pub/Sub Topic]
@@ -27,3 +25,4 @@ flowchart LR
   C -->|features| D[Vertex AI Endpoint]
   C -->|results| E[BigQuery]
   E --> F[Dashboard - Looker or Streamlit]
+```
