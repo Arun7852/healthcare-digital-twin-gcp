@@ -16,14 +16,14 @@ Provide a copy-and-pasteable, HIPAA-aware pattern for secure, real-time AI on Go
 - **Viz:** Looker Studio or Streamlit  
 - **Security:** Service Accounts, IAM (least-priv), **CMEK (Cloud KMS)**  
 - **Ops:** Cloud Logging, basic alerting
-
 ## Architecture (rough)
+
 ```mermaid
 flowchart LR
-    A[Synthetic Vitals Generator] -->|JSON| B[Pub/Sub Topic]
-    B --> C[Subscriber - Cloud Run or Function]
-    C -->|features| D[Vertex AI Endpoint]
-    C -->|results| E[BigQuery]
-    E --> F[Dashboard - Looker or Streamlit]
+  A[Synthetic Vitals Generator] -->|JSON| B[Pub/Sub Topic]
+  B --> C[Subscriber - Cloud Run or Function]
+  C -->|features| D[Vertex AI Endpoint]
+  C -->|results| E[BigQuery]
+  E --> F[Dashboard - Looker or Streamlit]
 ## Milestone Log
 - 2025-10-12: Repository scaffolded (folders, README, architecture diagram).  
