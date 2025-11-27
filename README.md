@@ -27,5 +27,4 @@ flowchart LR
   E --> F[Dashboard - Looker or Streamlit]
 ```
 
-## Milestone Log
-- 2025-10-12: Repository scaffolded (folders, README, architecture diagram).
+
