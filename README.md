@@ -23,9 +23,10 @@ Provide a copy-and-pasteable, HIPAA-aware pattern for secure, real-time AI on Go
 
 flowchart LR
   A[Synthetic Vitals Generator] --> B[Pub/Sub Topic]
-  B --> C[Risk Analyzer (Python Subscriber)]
+  B --> C[Risk Analyzer - Python Subscriber]
   B --> D[BigQuery Table]
-  D --> E[Dashboard (Looker Studio)]
+  D --> E[Dashboard - Looker Studio]
+
 ```
 
 
