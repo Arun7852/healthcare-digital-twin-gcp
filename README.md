@@ -16,7 +16,21 @@ Provide a copy-and-pasteable, HIPAA-aware pattern for secure, real-time AI on Go
 - **Viz:** Looker Studio or Streamlit  
 - **Security:** Service Accounts, IAM (least-priv), **CMEK (Cloud KMS)**  
 - **Ops:** Cloud Logging, basic alerting
-## Architecture (rough)
+
+
+## Architecture v1
+```mermaid
+
+flowchart LR
+  A[Synthetic Vitals Generator] --> B[Pub/Sub Topic]
+  B --> C[Risk Analyzer (Python Subscriber)]
+  B --> D[BigQuery Table]
+  D --> E[Dashboard (Looker Studio)]
+```
+
+
+
+## Architecture v2 
 
 ```mermaid
 flowchart LR
